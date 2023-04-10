@@ -44,20 +44,22 @@ for x in guess_1:
     lista_guess_1.append(x)
 print(lista_guess_1)
 
-#porównaywanie liter w obydwu słowach
+#porównywanie liter w obydwu słowach
+szukane_słowo_podpowiedź = ['_','_','_','_','_']
+
 i=0
-while i <= 4:
-    x = lista_guess_1[i]
-    if lista_guess_1[i] in lista_szukane:
-        print(f'{x} jest')
-    else:
-        print(f"{x} nie ma")
-    i = i+1
+while i<=4:
+    for x in lista_guess_1:
+        if x == lista_szukane[i]:
+            szukane_słowo_podpowiedź[i] = x
+    i=i+1
+
+print('Poszukiwane słowo jest postaci: ', szukane_słowo_podpowiedź)
 
 
 #if lista_guess_1[i] == lista_szukane[i]:
- #       print(f'{lista_guess_1(i)} znajduje się na prawidłowej pozycji {i}')
- #   i=i+1
+#       print(f'{lista_guess_1(i)} znajduje się na prawidłowej pozycji {i}')
+#       i=i+1
 
 
-##      ***VISUAL INTERFACE***
+##      *** VISUAL INTERFACE ***
